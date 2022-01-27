@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Project</title>
+</head>
+<body>
+  function CheckColors(val){
+    const element = document.getElementById('color');
+    const inputBlock = document.getElementById('input-block');
+    inputBlock.innerHTML = '';
+   
+     for(let i = 0; i < val; i++){
+       const input = document.createElement('input');
+       input.id = `friend-${i+1}`;
+       input.placeholder = `Friend ${i+1}`;
+       inputBlock.append(input)
+     } 
+   
+   }
+   #input-block input {
+     padding: 5px;
+     margin: 5px;
+   }
+     <select name="color" onchange='CheckColors(this.value);'> 
+       <option>How Many Friends Do You Have?</option>  
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+       <option value="5">5</option>
+     </select>
+   
+     <br /> <br />
+   
+     <div id="input-block"> </div>
+  
+</body>
+</html>
